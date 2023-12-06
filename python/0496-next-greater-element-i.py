@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
 
@@ -35,3 +38,10 @@ class Solution:
                     break
         
         return res
+
+# input1: ([4, 1, 2], [1, 3, 4, 2]) result: [-1, 3, -1]
+# input1: ([2, 4], [1, 2, 3, 4]) result: [3, -1]
+
+tuple = (  (nums,nums2) , (nums3,nums4)  )
+for item in tuple:
+    print("input1:",item, "result:", Solution().nextGreaterElement(item[0], item[1]))

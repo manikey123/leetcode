@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         # Solution with O(1) space complexity
@@ -38,3 +41,14 @@ class Solution3:
                f[i] = 1
                n -= 1
        return n <= 0
+
+
+nums  = [1,0,0,0,1] ; target = 1
+nums2 = [1,0,0,0,1]; target2 = 2
+tuple = (  (nums,target) , (nums2,target2)  )
+# input1: ([1, 0, 0, 0, 1], 1) result: True
+# input1: ([1, 0, 0, 0, 1], 2) result: False
+for item in tuple:
+    print("input1:",item, "result:", Solution().canPlaceFlowers(item[0], item[1]))
+    print("input1:",item, "result:", Solution2().canPlaceFlowers(item[0], item[1]))
+    print("input1:",item, "result:", Solution3().canPlaceFlowers(item[0], item[1]))

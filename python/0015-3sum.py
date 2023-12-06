@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
@@ -26,3 +27,17 @@ class Solution:
                         l += 1
                         
         return res
+
+nums  = [-1,0,1,2,-1,-4]
+nums2 = [0,1,1]
+nums3 = [0,0,0]
+tuple = (  (nums) , (nums2) , (nums3) )
+
+s = Solution()
+for item in tuple:
+    print("input:",item, "output:", s.threeSum(item))
+
+#Results:
+# input: [-4, -1, -1, 0, 1, 2] output: [[-1, -1, 2], [-1, 0, 1]]
+# input: [0, 1, 1] output: []
+# input: [0, 0, 0] output: [[0, 0, 0]]

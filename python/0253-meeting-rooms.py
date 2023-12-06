@@ -19,3 +19,12 @@ class Solution:
                 count -= 1
             res = max(res, count)
         return res
+
+intervals = [[0,30],[5,10],[15,20]]
+intervals2 = [[7,10],[2,4]]
+tuple = (intervals, intervals2)
+# Input: [[0, 30], [5, 10], [15, 20]] Output: 2
+# Input: [[7, 10], [2, 4]] Output: 1
+s = Solution()
+for item in tuple:
+    print("Input:",item, "Output:", s.minMeetingRooms(item))

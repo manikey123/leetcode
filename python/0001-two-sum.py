@@ -1,4 +1,4 @@
-from typing import List 
+from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         prevMap = {}  # val -> index
@@ -14,4 +14,4 @@ nums2 = [3,2,4]; target2 = 6
 nums3 = [3,3] ; target3 = 6
 tuple = (  (nums,target) , (nums2,target2) , (nums3,target3) )
 for item in tuple:
-    print("input:",item, "result:", s.twoSum(item[0], item[1]))
+    print("input1:",item, "result:", s.twoSum(item[0], item[1]))

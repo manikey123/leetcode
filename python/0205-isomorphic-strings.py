@@ -9,3 +9,13 @@ class Solution:
             mapTS[c2] = c1
 
         return True
+
+s  = "egg" ; target = "add"
+s2 = "foo"; target2 = "bar"
+s3 = "paper" ; target3 = "title"
+tuple = (  (s,target) , (s2,target2) , (s3,target3) )
+# input1: ('egg', 'add') result: True
+# input1: ('foo', 'bar') result: False
+# input1: ('paper', 'title') result: True
+for item in tuple:
+    print("input1:",item, "result:", Solution().isIsomorphic(item[0], item[1]))

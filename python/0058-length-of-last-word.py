@@ -12,3 +12,9 @@ class Solution:
             else:
                 c += 1
         return c
+s = "Hello World"
+s2 = "   fly me   to   the moon  "
+s3 = "luffy is still joyboy"
+tuple = (s , s2, s3)
+for item in tuple:
+    print("Input:",item, "Output:", Solution().lengthOfLastWord(item))

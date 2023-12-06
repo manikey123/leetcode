@@ -6,3 +6,11 @@ class Solution:
                 i += 1
             j += 1
         return i == len(s)
+s  =  "abc" ; t = "ahbgdc"
+s2 = "axc"; t2 = "ahbgdc"
+nums3 = [3,3] ; target3 = 6
+tuple = (  (s,t) , (s2,t2) )
+# input1: ('abc', 'ahbgdc') result: True
+# input1: ('axc', 'ahbgdc') result: False
+for item in tuple:
+    print("input1:",item, "result:", Solution().isSubsequence(item[0], item[1]))

@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         res = ""
@@ -7,3 +10,11 @@ class Solution:
                     return res
             res += strs[0][i]
         return res
+
+s = ["flower","flow","flight"]
+s2 = ["dog","racecar","car"]
+tuple = (s , s2)
+# Input: ['flower', 'flow', 'flight'] Output: fl
+# Input: ['dog', 'racecar', 'car'] Output:
+for item in tuple:
+    print("Input:",item, "Output:", Solution().longestCommonPrefix(item))

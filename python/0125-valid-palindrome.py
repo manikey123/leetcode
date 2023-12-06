@@ -19,3 +19,13 @@ class Solution:
             or ord("a") <= ord(c) <= ord("z")
             or ord("0") <= ord(c) <= ord("9")
         )
+s1 = "A man, a plan, a canal: Panama"
+s2 = "race a car"
+s3= " "
+
+tuple = (s1,s2,s3)
+
+#
+s = Solution()
+for item in tuple:
+    print("Input:",item, "Output:", s.isPalindrome(item))
