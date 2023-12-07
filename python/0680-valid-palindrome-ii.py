@@ -19,3 +19,12 @@ class Solution:
                 return False
         
         return True
+s = "aba"
+s2 = "abca"
+s3 = "abc"
+tuple = (s , s2, s3)
+# Input: aba Output: True
+# Input: abca Output: True
+# Input: abc Output: False
+for item in tuple:
+    print("Input:",item, "Output:", Solution().validPalindrome(item))

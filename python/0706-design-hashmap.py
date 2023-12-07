@@ -34,3 +34,24 @@ class MyHashMap:
             cur = cur.next
         if cur and cur.next:
             cur.next = cur.next.next
+
+#Input
+keyOPs= ["MyHashMap", "put", "put", "get", "get", "put", "get", "remove", "get"]
+valueOps =[[], [1, 1], [2, 2], [1], [3], [2, 1], [2], [2], [2]]
+obj = MyHashMap()
+output = []
+#[null, null, null, 1, -1, null, 1, null, -1]
+for index, value in enumerate(keyOPs):
+    if value == "MyHashMap":
+        obj = MyHashMap()
+        output.append(None)
+    elif value == "get":
+        output1 = obj.get(valueOps[index][0])
+        output.append(output1)
+    elif value == "put":
+        obj.put(valueOps[index][0], valueOps[index][1])
+        output.append(None)
+    elif value == "remove":
+        obj.remove(valueOps[index][0])
+        output.append(None)
+print(output)

@@ -37,3 +37,9 @@ class Solution:
                 for i in ['a', 'e', 'i', 'o', 'u']:
                     Tot = Tot + self.countVowelPermutation(n - 1, i);                    
                 return Tot % 1000000007         
+s =  "A man, a plan, a canal: Panama"
+s2 = "race a car"
+s3 = " "
+tuple = (s , s2, s3)
+for item in tuple:
+    print("Input:",item, "Output:", Solution().countVowelPermutation(item))

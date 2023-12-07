@@ -29,3 +29,10 @@ class Solution:
             if j == len(needle):
                 return i - len(needle)
         return -1
+nums  = "sadbutsad" ; target = "sad"
+nums2 = "leetcode"; target2 =  "leeto"
+tuple = (  (nums,target) , (nums2,target2) )
+# input1: ('sadbutsad', 'sad') result: 0
+# input1: ('leetcode', 'leeto') result: -1
+for item in tuple:
+    print("input1:",item, "result:", Solution().strStr(item[0], item[1]))

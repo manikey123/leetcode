@@ -13,3 +13,10 @@ class Solution:
         lst2 = [num for num in nums2_set if num not in nums1_set]
 
         return [lst1, lst2]
+nums  = [1,2,3] ; target = [2,4,6]
+nums2 = [1,2,3,3]; target2 = [1,1,2,2]
+tuple = (  (nums,target) , (nums2,target2) )
+# input1: ([1, 2, 3], [2, 4, 6]) result: [[1, 3], [4, 6]]
+# input1: ([1, 2, 3, 3], [1, 1, 2, 2]) result: [[3], []]
+for item in tuple:
+    print("input1:",item, "result:", Solution().findDifference(item[0], item[1]))

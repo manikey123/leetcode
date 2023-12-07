@@ -12,3 +12,12 @@ class Solution:
             stack.pop()
 
         return not stack
+s = "()"
+s2 = "()[]{}"
+s3 ="(]"
+tuple = (s , s2, s3)
+# Input: () Output: True
+# Input: ()[]{} Output: True
+# Input: (] Output: False
+for item in tuple:
+    print("Input:",item, "Output:", Solution().isValid(item))

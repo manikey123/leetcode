@@ -24,6 +24,9 @@ s2 = "race a car"
 s3= " "
 
 tuple = (s1,s2,s3)
+# Input: A man, a plan, a canal: Panama Output: True
+# Input: race a car Output: False
+# Input:   Output: True
 
 #
 s = Solution()
