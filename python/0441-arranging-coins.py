@@ -11,3 +11,10 @@ class Solution:
                 l = mid + 1
                 res = max(mid, res)
         return res
+s = 5
+s2 = 8
+tuple = (s , s2)
+# Input: 5 Output: 2
+# Input: 8 Output: 3
+for item in tuple:
+    print("Input:",item, "Output:", Solution().arrangeCoins(item))

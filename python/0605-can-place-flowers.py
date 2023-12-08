@@ -22,6 +22,7 @@ class Solution2:
        for i in range(len(flowerbed)):
             if n == 0:
                 return True
+            # ensure the ends are coered with 0 check first and then the normal condition
             if ((i == 0 or flowerbed[i - 1] == 0)   # If at the first element or the previous element equals to 0
                 and (flowerbed[i] == 0)             # If current element equals to 0
                 and (i == len(flowerbed) - 1 or flowerbed[i + 1] == 0)): # If at the last element or the next element equals to 0
@@ -35,6 +36,7 @@ class Solution3:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
        # Solution with O(n) space complexity
        f = [0] + flowerbed + [0]
+       # by embedding the ends with 0 we remoe the zero at the ends of the code
        
        for i in range(1, len(f) - 1):  # skip first & last
            if f[i - 1] == 0 and f[i] == 0 and f[i + 1] == 0:

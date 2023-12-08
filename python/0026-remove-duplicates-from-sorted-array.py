@@ -1,9 +1,14 @@
+# can use hashset but u will have 2 for loops and 2x memory
+# why list becoz array is sorted ask if array is sorted before attempting this problem
+from typing import List
+
+
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         L = 1
-        
+        # start with left =1 
         for R in range(1, len(nums)):
-            if nums[R] != nums[R - 1]:
+            if nums[R] != nums[R - 1]: # check if index0 != index1 add to left
                 nums[L] = nums[R]
                 L += 1
         return L

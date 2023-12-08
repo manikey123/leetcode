@@ -19,3 +19,11 @@ class Solution:
             else:
                 return True
         return False
+
+s = 16
+s2 = 14
+tuple = (s , s2)
+# Input: 16 Output: True
+# Input: 14 Output: False
+for item in tuple:
+    print("Input:",item, "Output:", Solution().isPerfectSquare(item))

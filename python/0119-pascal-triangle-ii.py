@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     Memo = {}
 
@@ -7,6 +10,7 @@ class Solution:
         if rowIndex == 0:
             return [1]
         ListPrec = self.getRow(rowIndex - 1)
+        # we need some result to return
         Result = [1]
         for i in range(0, len(ListPrec) - 1):
             Result.append(ListPrec[i] + ListPrec[i + 1])
