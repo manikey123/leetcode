@@ -8,8 +8,8 @@ class Solution:
         #ensure j is used for the target string t
         while i < len(s) and j < len(t):
             if s[i] == t[j]:
-                i += 1
-            j += 1
+                i += 1 # i is guarding s
+            j += 1   # j is guarding t
         return i == len(s)
 s  =  "abc" ; t = "ahbgdc"
 s2 = "axc"; t2 = "ahbgdc"

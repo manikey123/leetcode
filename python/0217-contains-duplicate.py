@@ -6,9 +6,9 @@ class Solution:
         hashset = set()
 
         for n in nums:
-            if n in hashset:
+            if n in hashset: # return true when in hashset
                 return True
-            hashset.add(n)
+            hashset.add(n)  #keep adding into array by default
         return False
 list1 = [1,2,3,1]
 list2 = [1,2,3,4]
