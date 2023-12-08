@@ -1,6 +1,10 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         mapST, mapTS = {}, {}
+        #u need two becoz of this example
+        # s ="badc"
+        # t ="baba"
+        # O/p false
 
         for c1, c2 in zip(s, t):
             if (c1 in mapST and mapST[c1] != c2) or (c2 in mapTS and mapTS[c2] != c1):

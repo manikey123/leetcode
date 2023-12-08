@@ -1,6 +1,11 @@
 class Solution:
+
+
+## Why sliding window and not hashMap ??
+## As we need to ensure the sequnece of the characters
     def isSubsequence(self, s: str, t: str) -> bool:
         i, j = 0, 0
+        #ensure j is used for the target string t
         while i < len(s) and j < len(t):
             if s[i] == t[j]:
                 i += 1
