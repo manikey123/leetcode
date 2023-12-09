@@ -32,4 +32,4 @@ tuple = (s , s2)
 # Input: ['flower', 'flow', 'flight'] Output: fl
 # Input: ['dog', 'racecar', 'car'] Output:
 for item in tuple:
-    print("Input:",item, "Output:", Solution().longestCommonPrefix(item))
+    print("Input:",item, "Output:", Solution().longestCommonPrefix2(item))

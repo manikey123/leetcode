@@ -8,14 +8,16 @@ class Solution:
             newMax = max(rightMax, arr[i])
             arr[i] = rightMax
             rightMax = newMax
+            print("test")
         return arr
+# arr2 = [400]
 arr = [17,18,5,4,6,1]
-arr2 = [400]
+
 # input item [17, 18, 5, 4, 6, 1]
 # output: [18, 6, 6, 6, 1, -1]
 # input item [400]
 # output: [-1]
-tuple2 = [  arr , arr2 ]
+tuple2 = [  arr  ]
 for item in tuple2:
     print("input item", item )
     print("output:", Solution().replaceElements(item))

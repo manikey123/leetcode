@@ -8,7 +8,7 @@ class Solution:
         for ch in s:
             hm[ch] = 1 + hm.get(ch, 0)
         for ch in t:
-            if  (ch not in  hm.keys()) or hm[ch]==0:
+            if  (ch not in  hm.keys()) or hm[ch]==0:# in target the ch is not al all present or present with value zero
                 return False
             else :
                 hm[ch] =hm[ch] -1

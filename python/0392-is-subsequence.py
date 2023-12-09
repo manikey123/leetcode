@@ -6,10 +6,11 @@ class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         i, j = 0, 0
         #ensure j is used for the target string t
-        while i < len(s) and j < len(t):
-            if s[i] == t[j]:
-                i += 1 # i is guarding s
-            j += 1   # j is guarding t
+        while i < len(s) and j < len(t): #running both strings parallely
+            print(s[i], t[j])
+            if s[i] == t[j]: #matching condition
+                i += 1 # when there is character match beteen first and second string increment i pointer ie slow
+            j += 1   # j pointer keeps incrementing for the second larger string
         return i == len(s)
 s  =  "abc" ; t = "ahbgdc"
 s2 = "axc"; t2 = "ahbgdc"

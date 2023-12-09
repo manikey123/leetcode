@@ -17,7 +17,7 @@ class Solution:
         return n <= 0
 
 class Solution2:
-    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool: #easier
        # Another solution with O(1) space complexity
        for i in range(len(flowerbed)):
             if n == 0:

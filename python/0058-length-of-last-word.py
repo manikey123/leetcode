@@ -5,8 +5,8 @@ class Solution:
 	"""
 	#	return len(s.split()[-1])
         c = 0
-        for i in s[::-1]:
-            if i == " ":
+        for i in s[::-1]: # direct string usage
+            if i == " ": # first occurance of space after the word, use that to exit
                 if c >= 1:
                     return c
             else:

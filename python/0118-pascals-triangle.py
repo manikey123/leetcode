@@ -43,7 +43,7 @@ class Solution:
 
         return result
 
-    def generateDP(self, numRows: int) -> List[List[int]]:
+    def generateDP(self, numRows: int) -> List[List[int]]:  #easiest 1
         if numRows == 0:
             return []
         if numRows == 1:
