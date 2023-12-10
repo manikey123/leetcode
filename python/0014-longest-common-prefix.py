@@ -7,11 +7,11 @@ class Solution:
         lengthofFirstString = len(strs[0])
         for i in range(lengthofFirstString):
         # check the for ch in the first word with every word until one word ends
-            for s in strs[1:]:
+            for ch in strs[1:]:  # itnerate the word of the string flow, flight
                 #strs =["ab", "a"]
                 # going through each str in list
                 #end of string.under consideration     #avoid the first letters
-                if i == len(s)  or s[i] != strs[0][i]:
+                if i == len(ch)  or ch[i] != strs[0][i]: #i == len(ch) --> string ending ; # compare the ch or remaining strings with the first word corresponding component
                     print("test",s, res)
                     return res
             print(res)

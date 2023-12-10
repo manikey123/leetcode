@@ -23,7 +23,7 @@ class Solution2:
             if n == 0:
                 return True
             # ensure the ends are coered with 0 check first and then the normal condition
-            if ((i == 0 or flowerbed[i - 1] == 0)   # If at the first element or the previous element equals to 0
+            if ((i == 0 or flowerbed[i - 1] == 0)   # If at the current element or the previous element equals to 0
                 and (flowerbed[i] == 0)             # If current element equals to 0
                 and (i == len(flowerbed) - 1 or flowerbed[i + 1] == 0)): # If at the last element or the next element equals to 0
                 # Place flower at the current position
@@ -39,9 +39,9 @@ class Solution3:
        # by embedding the ends with 0 we remoe the zero at the ends of the code
 
        for i in range(1, len(f) - 1):  # skip first & last
-           if f[i - 1] == 0 and f[i] == 0 and f[i + 1] == 0:
-               f[i] = 1
-               n -= 1
+           if f[i - 1] == 0 and f[i] == 0 and f[i + 1] == 0: #previous, current and next is zero --> good
+               f[i] = 1 #assign the current to 1
+               n -= 1 #decrement the target
        return n <= 0
 
 
