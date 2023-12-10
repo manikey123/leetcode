@@ -9,9 +9,27 @@ class Solution:
         nums1_set = set(nums1)
         nums2_set = set(nums2)
 
-        lst1 = [num for num in nums1_set if num not in nums2_set]
-        lst2 = [num for num in nums2_set if num not in nums1_set]
+        # lst1 = [num for num in nums1_set if num not in nums2_set]
+        # lst2 = [num for num in nums2_set if num not in nums1_set]
+        # Initialize an empty list
+        lst1 = []
 
+        # Iterate through elements in nums1_set
+        for num in nums1_set:
+            # Check if the current element is not in nums2_set
+            if num not in nums2_set:
+                # Add the element to lst1
+                lst1.append(num)
+
+        # Initialize an empty list
+        lst2 = []
+
+        # Iterate through elements in nums2_set
+        for num in nums2_set:
+            # Check if the current element is not in nums1_set
+            if num not in nums1_set:
+                # Add the element to lst2
+                lst2.append(num)
         return [lst1, lst2]
 nums  = [1,2,3] ; target = [2,4,6]
 nums2 = [1,2,3,3]; target2 = [1,1,2,2]

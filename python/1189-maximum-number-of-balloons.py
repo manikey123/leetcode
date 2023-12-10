@@ -3,13 +3,16 @@ from collections import Counter
 
 class Solution:
     def maxNumberOfBalloons(self, text: str) -> int:
-        countText = Counter(text)
-        balloon = Counter("balloon")
+        balloon_dict = {'b': 0, 'a': 0, 'l': 0, 'o': 0, 'n': 0}
 
-        res = len(text)  # or float("inf")
-        for c in balloon:
-            res = min(res, countText[c] // balloon[c])
-        return res
+        for char in text:
+            if char in balloon_dict:
+                balloon_dict[char] += 1
+
+        balloon_dict['l'] //= 2
+        balloon_dict['o'] //= 2
+
+        return min(balloon_dict.values())
 s = "nlaebolko"
 s2 = "loonbalxballpoon"
 s3 = "leetcode"
