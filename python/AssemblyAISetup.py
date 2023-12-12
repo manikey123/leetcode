@@ -14,7 +14,7 @@ aai.settings.api_key = f"41e787662ee947c3aeffaa42931b49db"
 # FILE_URL = 'C:\venetianSQL.mp3'
 # You can also transcribe a local file by passing in a file path
 # FILE_URL = './path/to/file.mp3'
-FILE_URL = 'Otis_Landerman_1208.mp3'
+FILE_URL = 'PublicisSapientKondandaramanGiriAzureDE.mp3'
 config = aai.TranscriptionConfig(speaker_labels=True)
 
 transcriber = aai.Transcriber()

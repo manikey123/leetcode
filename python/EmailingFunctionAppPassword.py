@@ -3,13 +3,13 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Email configuration
-sender_email = "mmohan7755@gmail.com"
+sender_email = "eternallearning757@gmail.com"
 receiver_email = "connect2makrant@gmail.com"
 subject = "Test Email"
 body = "This is a test email from Python."
 
 # App Password for Gmail (generated in Google Account settings)
-app_password = "onsqq"
+app_password = "xx"
 
 # Create the email message
 message = MIMEMultipart()

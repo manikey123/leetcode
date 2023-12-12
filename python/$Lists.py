@@ -19,6 +19,11 @@ print("Returns the index of the first occurrence of a specified value - 9 occurs
 
 print("Sorting functions : 01 list sort ", myList.sort())
 print ("my list", myList)
+my_list = [6, 5, 3, 8, 5, 1]
+myList2 = my_list.sort(reverse=True )
+print("Sorting functions : 01b list sort ", myList2, my_list)  #.sort does inplace replacement. it does not return value.
+
+
 print("02 list reverse ", myList.reverse())
 print ("my list", myList)
 print(" 03 sorted list  function ", sorted(myList)) # sorts
@@ -99,6 +104,19 @@ print(starts_with_hello)  # Output: True
 print(ends_with_world)  # Output: False
 
 #A03 Dictionary
+
+# Creating an empty dictionary
+my_dict = {}
+
+# Adding key-value pairs
+my_dict['name'] = 'John'
+my_dict['age'] = 30
+my_dict['city'] = 'New York'
+# Displaying the dictionary
+print(my_dict)
+
+
+
 my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
 keys_list = my_dict.keys()
 print(keys_list )  # Output: dict_keys(['name', 'age', 'city'])
@@ -122,3 +140,46 @@ value = my_dict.get('keyx')   ; print(value)  #none
 value = my_dict.get('keyx',0) ; print(value)  #0
 
 #A04 2 D Array
+
+
+l = [6, 5, 3, 8, 5, 1]
+# Sort the list in descending order
+sorted_list = sorted(l, reverse=True)
+# Take the top two elements
+top_two_elements = sorted_list[:2]
+# Display the top two elements
+print("Top two elements:", top_two_elements)
+
+
+my_list = [6, 5, 3, 8, 5, 1]
+
+# Sort the list in reverse order using sorted function
+sorted_list = sorted(my_list, reverse=True)
+
+# Display the sorted list in reverse order
+print("Top two elements:", sorted_list[:2])
+
+#Using nlargest from heapq module:
+import heapq
+
+l = [6, 5, 3, 8, 5, 1]
+
+# Find the top two elements using heapq.nlargest
+top_two_elements = heapq.nlargest(2, l)
+
+# Display the top two elements
+print("Top two elements using heapq.nlargest:", top_two_elements)
+
+#Using max function twice:
+
+l = [6, 5, 3, 8, 5, 1]
+
+# Find the maximum element
+max_element = max(l)
+
+# Remove the maximum element and find the new maximum element (second highest)
+l.remove(max_element)
+second_max_element = max(l)
+
+# Display the top two elements
+print("Top two elements using max function twice:", [max_element, second_max_element])
