@@ -63,7 +63,7 @@ mean_age = df2['Age'].mean()
 median_age = df2['Age'].median()
 print(f"Mean Age: {mean_age}, Median Age: {median_age}")
 
-
+#
 # #Groupings
 min_age = df2['Age'].min() ; max_age = df2['Age'].max() ; average_age = df2['Age'].mean()
 print(f'Minimum Age: {min_age} MaxAge :{max_age} , AverageAge: {average_age}')
