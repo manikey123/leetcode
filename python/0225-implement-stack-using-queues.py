@@ -1,21 +1,36 @@
+from collections import deque
+
 class MyStack:
+
     def __init__(self):
-        self.q = deque()
+        self.queue = deque()
 
     def push(self, x: int) -> None:
-        self.q.append(x)
+        q = self.queue
+        q.append(x)
+        for _ in range(0,len(q) - 1):
+            q.append(q.popleft())
+
 
     def pop(self) -> int:
-        for i in range(len(self.q) - 1):
-            self.push(self.q.popleft())
-        return self.q.popleft()
+        return self.queue.popleft()
 
     def top(self) -> int:
-        for i in range(len(self.q) - 1):
-            self.push(self.q.popleft())
-        res = self.q[0]
-        self.push(self.q.popleft())
-        return res
+        return self.queue[0]
 
     def empty(self) -> bool:
-        return len(self.q) == 0
+        return not self.queue
+
+# Test cases from LeetCode
+myStack = MyStack()
+myStack.push(1)
+myStack.push(2)
+# assert myStack.top() == 2  # return 2
+# assert myStack.pop() == 2  # return 2
+# assert not myStack.empty()  # return False
+
+# Additional test cases
+myStack.push(3)
+assert myStack.top() == 3
+assert myStack.pop() == 3
+# assert myStack.empty()  == True # return True

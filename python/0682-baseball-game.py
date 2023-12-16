@@ -1,24 +1,33 @@
-class Solution:
-    def calPoints(self, operations: List[str]) -> int:
-        
-        score_stack = []
-        
-        for o in operations:
-            
-            # it is +, D, or C
-            # if stack isn't of sufficient length, then operation is voided
-            if o == "+" and len(score_stack) >= 2:
-                summed = score_stack[-2] + score_stack[-1]
-                score_stack.append(summed)
-                
-            elif o == "D" and len(score_stack) >= 1:
-                doubled = score_stack[-1] * 2
-                score_stack.append(doubled)
-                
-            elif o == "C" and len(score_stack) >= 1:
-                score_stack.pop() 
-                
-            else: 
-                score_stack.append(int(o))
+from typing import List
 
-        return sum(score_stack)
+
+class Solution:
+    def calPoints(self, ops: List[str]) -> int:
+        stack = []
+
+        for op in ops:
+            if op == '+':
+                # Add the sum of the last two scores
+                stack.append(stack[-1] + stack[-2])
+            elif op == 'D':
+                # Double the last score
+                stack.append(2 * stack[-1])
+            elif op == 'C':
+                # Remove the last score
+                stack.pop()
+            else:
+                # Add the score as an integer
+                stack.append(int(op))
+
+        # Sum up all the scores
+        return sum(stack)
+
+# Test cases from LeetCode
+solution = Solution()
+assert solution.calPoints(["5","2","C","D","+"]) == 30
+assert solution.calPoints(["5","-2","4","C","D","9","+","+"]) == 27
+assert solution.calPoints(["1","C"]) == 0
+
+# Additional test cases
+assert solution.calPoints(["10","20","D","+","C"]) == 40
+assert solution.calPoints(["3","D","C","+","5"]) == 11

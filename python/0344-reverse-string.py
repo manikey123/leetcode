@@ -1,21 +1,28 @@
-from typing import List
+def reverseString(s):
+    """
+    Reverses the characters of the array s in place.
 
+    Args:
+    s (List[str]): The array of characters to be reversed.
 
-class Solution:
-    def reverseString(self, s: List[str]) -> None:
-        """
-        Do not return anything, modify s in-place instead.
-        """
-        l = 0
-        r = len(s) - 1
-        while l < r:
-            s[l],s[r] = s[r],s[l]
-            l += 1
-            r -= 1
-s = ["h","e","l","l","o"]
-s2 = ["H","a","n","n","a","h"]
-tuple = (s , s2)
-# Input: ['o', 'l', 'l', 'e', 'h'] Output: None
-# Input: ['h', 'a', 'n', 'n', 'a', 'H'] Output: None
-for item in tuple:
-    print("Input:",item, "Output:", Solution().reverseString(item))
+    Returns:
+    None: The function modifies the array in place and does not return anything.
+    """
+    left, right = 0, len(s) - 1  # Initialize two pointers
+
+    while left < right:
+        s[left], s[right] = s[right], s[left]  # Swap the elements
+        left, right = left + 1, right - 1  # Move the pointers towards the center
+
+# Test cases
+test_cases = [
+    ["h", "e", "l", "l", "o"],  # Example 1
+    ["H", "a", "n", "n", "a", "h"],  # Example 2
+    ["a"],  # Single character
+    [],  # Empty array
+    ["r", "a", "c", "e", "c", "a", "r"]  # Odd number of characters
+]
+
+for test in test_cases:
+    reverseString(test)
+    print(test)
