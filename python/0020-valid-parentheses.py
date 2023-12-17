@@ -8,9 +8,9 @@ class Solution:
         mapping = {")": "(", "}": "{", "]": "["}
 
         # For every bracket in the expression
-        for char in s:
-            # If the character is a closing bracket
-            if char in mapping:
+        for ch in s:
+            # If the chacter is a closing bracket
+            if ch in mapping:
                 # Pop the topmost element from the stack, if it is non-empty
                 # Otherwise assign a dummy value of '#' to the top_element variable
                 # top_element = stack.pop() if stack else '#'
@@ -19,11 +19,11 @@ class Solution:
                     return False  # Stack #if u get directly closed bracker then direct exit pip
                 top_element = stack.pop()
                 # The mapping for the opening bracket in our hash and the top element of the stack don't match, return false
-                if mapping[char] != top_element:
+                if mapping[ch] != top_element:
                     return False
             else:
                 # We have an opening bracket, simply push it onto the stack
-                stack.append(char)
+                stack.append(ch)
 
         # If the stack is empty, return true. Otherwise, return false
         return not stack
@@ -36,18 +36,18 @@ class Solution:
         mapping = {"(": ")", "{": "}", "[": "]"}
 
         # For every bracket in the expression
-        for char in s:
-            # If the character is an opening bracket
-            if char in mapping:
+        for ch in s:
+            # If the chacter is an opening bracket
+            if ch in mapping:
                 # Push the corresponding closing bracket onto the stack
-                stack.append(mapping[char])
+                stack.append(mapping[ch])
             else:
-                # If the stack is empty or the character does not match the top element of the stack, return false
-                if not stack or char != stack.pop():
+                # If the stack is empty or the chacter does not match the top element of the stack, return false
+                if not stack or ch != stack.pop():
                     return False
 
         # If the stack is empty, return true. Otherwise, return false
-        return not stack
+        return not stack #return true when nothing in stack
 
 # Test Cases
 sol = Solution()

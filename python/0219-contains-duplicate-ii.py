@@ -23,11 +23,12 @@ class Solution:
             return False  # Return False if no duplicate is found
 
         # You can switch between the two methods here
-        return using_hash_map()
-        # return using_set()
+        # return using_hash_map()
+        return using_set()
 
 # Test Cases
 sol = Solution()
+assert sol.containsNearbyDuplicate(['A','B','C', 'A'], 3) == True  # Example 1
 assert sol.containsNearbyDuplicate([1,2,3,1], 3) == True  # Example 1
 assert sol.containsNearbyDuplicate([1,0,1,1], 1) == True  # Example 2
 assert sol.containsNearbyDuplicate([1,2,3,1,2,3], 2) == False  # Example 3
@@ -35,3 +36,11 @@ assert sol.containsNearbyDuplicate([1,2,3,1,2,3], 2) == False  # Example 3
 # Additional Test Cases
 assert sol.containsNearbyDuplicate([1,2,3,4,5,6,7,8,9,1], 10) == True
 assert sol.containsNearbyDuplicate([1,2,3,4,5,6,7,8,9,10], 5) == False
+
+'''
+The "Contains Duplicate II" problem on LeetCode asks whether there are two distinct indices i and j in an array of integers such that the numbers at those indices are the same, and the absolute difference between i and j is at most k.
+Here's a conceptual explanation for all input examples mentioned:
+If you have an array like [1,2,3,1] and k = 3, the function should return true. This is because the number 1 appears at indices 0 and 3, and the difference between these indices is 3, which does not exceed k.
+With an array like [1,0,1,1] and k = 1, the function should also return true. There are duplicate 1s at indices 2 and 3, and they are only one index apart, which is within the k limit.
+In the case of [1,2,3,1,2,3] and k = 2, the function should return false. Although there are duplicates in the array, none of them are within 2 indices of each other.
+'''

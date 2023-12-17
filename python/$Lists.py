@@ -183,3 +183,9 @@ second_max_element = max(l)
 
 # Display the top two elements
 print("Top two elements using max function twice:", [max_element, second_max_element])
+
+nums = [-4, -1, 0, 3, 10]
+n = len(nums)
+# Initialize a result list with zeros, of the same length as the input list
+result = [0] * n
+print ("result", result )
