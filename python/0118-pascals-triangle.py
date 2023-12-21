@@ -80,10 +80,32 @@ class Solution:
             ListPrec[-1].append(ListPrec[-2][i] + ListPrec[-2][i + 1])
         ListPrec[-1].append(1)
         return ListPrec
+
+    def generate_iterative1(self, numRows):
+        """
+        Generate Pascal's triangle using an iterative approach.
+        Time Complexity: O(numRows^2)
+        Space Complexity: O(numRows^2)
+        """
+        if numRows == 0:
+            return []
+
+        triangle = [[1]]
+
+        for i in range(1, numRows):
+            row = [1]
+            for j in range(1, i):
+                row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
+            row.append(1)
+            triangle.append(row)
+        return triangle
+
+
 numRows = 5
 numRows2 = 1
 tuple = (numRows , numRows2)
 # Input: 5 Output: [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 # Input: 1 Output: [[1]]
 for item in tuple:
-    print("Input:",item, "Output:", Solution().generate(item))
+    print("Input:",item, "generate:", Solution().generate(item))
+    print("Input:",item, "generate_iterative1:", Solution().generate_iterative1(item))
