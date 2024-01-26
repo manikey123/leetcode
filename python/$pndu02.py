@@ -26,14 +26,11 @@ print(df2)
 df2['Gender'] = ['Male', 'Female', 'Male', 'Female', 'Female']
 print(f"Original dataframe odf2 \n {df2}")
 
-
-
+df_fil = df2['Age'] > 40 ; print("filter age is 40 dffilBoolean",df_fil)  #df_fil returns [False, False, True, True, False]
 print("df direct filter gives true false ", df2['Age'] > 40 , "cow")
-df_filtered = df2[df2['Age'] > 40] ; print("filter age is 40",df_filtered)
+df_filtered = df2[df2['Age'] > 40] ; print("dfFilter above 40",df_filtered)
 print("df2", df2) #not affected by filtering
 dfMale = df2[df2['Gender']=='Male'] ; print("dfMale", dfMale)
-
-#records
 
 #iloc
 print ("1",df2.iloc[0])          # Selects the first row
