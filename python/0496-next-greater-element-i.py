@@ -44,7 +44,6 @@ class Solution:
                     idx = nums1Idx[nums2[i]]
                     res[idx] = nums2[j]
                     break
-
         return res
 #
 # input1: ([4, 1, 2], [1, 3, 4, 2]) result: [-1, 3, -1]
@@ -57,3 +56,5 @@ nums2 = [2, 4]; nums22 = [1, 2, 3, 4]
 tuple = (  (nums1,nums11) , (nums2,nums22)  )
 for item in tuple:
     print("input1:",item, "result:", Solution().nextGreaterElement(item[0], item[1]))
+
+

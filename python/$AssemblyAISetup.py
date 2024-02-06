@@ -14,8 +14,9 @@ aai.settings.api_key = f"41e787662ee947c3aeffaa42931b49db"
 # FILE_URL = 'C:\venetianSQL.mp3'
 # You can also transcribe a local file by passing in a file path
 # FILE_URL = './path/to/file.mp3'
-FolderUrl = r'C:\Users\mmoha\OneDrive\07InterviewRecordings'
-FILE_URL = '0119AlamedaCounty.mp3'
+# FolderUrl = r'C:\Users\mmoha\OneDrive\07InterviewRecordings'
+FolderUrl = r'C:\pyNeetCode400Dec\leetcode\python'
+FILE_URL = 'JHV1hLi5Sd8.m4a'
 FullUrl = FolderUrl+ "\\" + FILE_URL
 config = aai.TranscriptionConfig(speaker_labels=True)
 

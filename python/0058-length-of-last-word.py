@@ -16,7 +16,7 @@ class Solution:
 s = "Hello World"
 s2 = "   fly me   to   the moon  "
 s3 = "luffy is still joyboy"
-tuple = ( s2, s, s3)
+tuple = ( s, s2, s3 )
 # Input:    fly me   to   the moon   -->Res: 4
 # Input: Hello World -->Res: 5
 # Input: luffy is still joyboy -->Res: 6
