@@ -101,6 +101,25 @@ class Solution:
         return triangle
 
 
+    def generatePascalsTriangleGG(self,numRows):
+        if numRows == 0:  # If no rows, return an empty list
+            return []
+
+        triangle = [[1]]  # Initialize the triangle with the first row
+
+        for row_num in range(1, numRows):  # Start from the second row
+            row = [1]  # Every row starts with 1
+            prev_row = triangle[row_num - 1]  # Get the previous row
+
+            # Iterate through the previous row to calculate the values for the current row
+            for j in range(1, len(prev_row)):
+                # Sum the two adjacent values from the previous row
+                row.append(prev_row[j - 1] + prev_row[j])
+
+            row.append(1)  # Every row ends with 1
+            triangle.append(row)  # Add the constructed row to the triangle
+
+        return triangle
 numRows = 5
 numRows2 = 1
 tuple = (numRows , numRows2)
@@ -108,4 +127,4 @@ tuple = (numRows , numRows2)
 # Input: 1 Output: [[1]]
 for item in tuple:
     print("Input:",item, "generate:", Solution().generate(item))
-    print("Input:",item, "generate_iterative1:", Solution().generate_iterative1(item))
+    print("Input:",item, "generate_iterative1:", Solution().generatePascalsTriangleGG(item))

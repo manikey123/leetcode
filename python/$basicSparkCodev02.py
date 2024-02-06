@@ -1,5 +1,11 @@
 import os
 import sys
+
+# Set the PySpark Python environment variables
+os.environ['PYSPARK_PYTHON'] = sys.executable
+os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
+
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, lit, upper, avg
 
@@ -10,6 +16,7 @@ os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
 # Initialize a SparkSession
 spark = SparkSession.builder \
     .appName("Enhanced PySpark Example") \
+    .config("spark.executor.processTreeMetrics.enabled", "false") \
     .getOrCreate()
 
 # Sample data
@@ -75,7 +82,7 @@ print(f"Total count of rows in the original DataFrame: {total_count}")
 first_row = df.first()
 print(f"First row of the original DataFrame: {first_row}")
 
-# Collect and print all rows (use with caution for large datasets)
+# Collect and print all rows (use with caution for large inputData)
 all_rows = df.collect()
 print("All rows in the original DataFrame:")
 print(all_rows)
